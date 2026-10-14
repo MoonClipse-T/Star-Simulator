@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>별과 우주 3D 시뮬레이터</title>
+<link rel="icon" href="img/eclipse_s.jpg">
+<style>
+:root{--sky:#04060c;--pearl:#efe9dc;--amber:#f2a33a;--slate:#8a93a3;--line:rgba(239,233,220,.14);
+  --body:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif}
+*{box-sizing:border-box}
+html,body{background:var(--sky)}
+body{margin:0;color:var(--pearl);font:17px/1.5 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px 60px}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding:24px 0 8px}
+.mark{font-size:22px;font-weight:700}.mark span{color:var(--amber)}
+.back{color:var(--slate);font-size:15px}
+h1{font-size:clamp(40px,7vw,72px);line-height:1.05;margin:28px 0 36px;font-weight:800;letter-spacing:-.02em}
+h1 small{display:block;font-size:.36em;color:var(--slate);font-weight:400;letter-spacing:0;margin-top:10px}
+section{border-top:1px solid var(--line);padding:22px 0 26px}
+h2{font-size:22px;margin:0 0 14px;font-weight:700;display:flex;align-items:baseline;gap:12px}
+h2 span{color:var(--amber);font-size:30px;font-weight:800}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.grid a{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:132px;padding:16px 18px;overflow:hidden;border:1px solid var(--line);background:#0b0e16}
+.grid a::before{content:"";position:absolute;inset:0;background:var(--bg) center/cover;opacity:.32;transition:opacity .3s,transform .4s}
+.grid a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,6,12,.1),rgba(4,6,12,.85))}
+.grid a:hover::before,.grid a:focus-visible::before{opacity:.7;transform:scale(1.04)}
+.grid .t,.grid .go{position:relative;z-index:1}
+.grid .t{font-size:22px;font-weight:700;line-height:1.3}
+.grid .go{align-self:flex-end;color:var(--amber);font-size:15px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a class="mark" href="https://moonclipse-t.github.io/Star-and-Galaxy/">Moon<span>Clipse</span></a><a class="back" href="https://moonclipse-t.github.io/Star-and-Galaxy/">← 별과 우주 아카이브</a></header>
+  <h1>3D 시뮬레이터<small>Ⅷ 별과 우주 · 눌러서 바로 시작</small></h1>
+<section><h2><span>1</span>별까지의 거리</h2><ul class="grid"><li><a href="01.html" style="--bg:url(img/l1.jpg)"><span class="t">거리와 시차</span><span class="go">열기 ▶</span></a></li><li><a href="02.html" style="--bg:url(img/l1.jpg)"><span class="t">연주 시차</span><span class="go">열기 ▶</span></a></li><li><a href="03.html" style="--bg:url(img/l1.jpg)"><span class="t">태양 주변 별 지도</span><span class="go">열기 ▶</span></a></li><li><a href="13.html" style="--bg:url(img/l1.jpg)"><span class="t">시차 측정 모형판</span><span class="go">열기 ▶</span></a></li></ul></section>
+<section><h2><span>2</span>별의 등급과 밝기</h2><ul class="grid"><li><a href="04.html" style="--bg:url(img/l2.jpg)"><span class="t">거리와 빛의 세기 실험</span><span class="go">열기 ▶</span></a></li><li><a href="05.html" style="--bg:url(img/l2.jpg)"><span class="t">태양을 10pc로</span><span class="go">열기 ▶</span></a></li><li><a href="06.html" style="--bg:url(img/l2.jpg)"><span class="t">겉보기 등급과 절대 등급</span><span class="go">열기 ▶</span></a></li></ul></section>
+<section><h2><span>3</span>별의 표면 온도와 색</h2><ul class="grid"><li><a href="07.html" style="--bg:url(img/l3.jpg)"><span class="t">별의 표면 온도와 색</span><span class="go">열기 ▶</span></a></li></ul></section>
+<section><h2><span>4</span>우리은하</h2><ul class="grid"><li><a href="08.html" style="--bg:url(img/l4.jpg)"><span class="t">우리은하</span><span class="go">열기 ▶</span></a></li><li><a href="09.html" style="--bg:url(img/l4.jpg)"><span class="t">산개 성단과 구상 성단</span><span class="go">열기 ▶</span></a></li></ul></section>
+<section><h2><span>5</span>팽창하는 우주</h2><ul class="grid"><li><a href="10.html" style="--bg:url(img/l5.jpg)"><span class="t">풍선 모형</span><span class="go">열기 ▶</span></a></li><li><a href="11.html" style="--bg:url(img/l5.jpg)"><span class="t">팽창하는 우주</span><span class="go">열기 ▶</span></a></li></ul></section>
+<section><h2><span>6</span>우주 탐사</h2><ul class="grid"><li><a href="12.html" style="--bg:url(img/l6.jpg)"><span class="t">인공위성</span><span class="go">열기 ▶</span></a></li></ul></section>
+</div>
+</body>
+</html>
