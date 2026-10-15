@@ -237,6 +237,7 @@ ol.check.qs li::before{font-size:30px;top:14px}
 /* ---------- 02 등급 덱 부품 ---------- */
 .luxctl{width:400px;padding:14px 18px}
 .luxctl .spreadb{width:100%}
+.luxctl .vw{display:flex}.luxctl .vw button{flex:1;padding:10px 4px;min-height:48px}
 .luxrec{right:40px;top:40px;width:470px;background:rgba(6,6,7,.8);border:1px solid var(--line);padding:12px 16px}
 .luxrec .rhead{display:flex;justify-content:space-between;align-items:center}
 .luxrec .rhead .lbl{margin:0}
@@ -245,6 +246,22 @@ ol.check.qs li::before{font-size:30px;top:14px}
 .luxrec .empty{font-size:15px;color:var(--mute);margin:8px 0 2px}
 .luxrec.has .empty{display:none}
 .luxrec:not(.has) table,.luxrec.folded table,.luxrec.folded .empty{display:none}
+.luxrec .tabs button{min-height:40px;padding:6px 14px;font-size:15px}
+.luxrec .gwrap,.luxrec.gmode table,.luxrec.gmode .empty,.luxrec.folded .gwrap{display:none}
+.luxrec.gmode:not(.folded) .gwrap{display:block}
+.luxrec .gx{display:flex;margin-top:10px}.luxrec .gx button{flex:1;min-height:40px;padding:6px 8px;font-size:14px}
+.luxrec .graph{display:block;width:100%;height:auto;margin-top:8px}
+.btn.mini.on{background:var(--acc);color:var(--acc-ink);font-weight:700}
+.luxcalc{left:40px;bottom:40px;width:340px;display:none;background:rgba(6,6,7,.94);border:1px solid var(--line2);padding:12px 14px}
+.luxcalc.on{display:block}
+.luxcalc .rhead{display:flex;justify-content:space-between;align-items:center}.luxcalc .rhead .lbl{margin:0}
+.luxcalc .cdisp{background:#111;border:1px solid var(--line2);padding:8px 12px;margin:10px 0;text-align:right}
+.luxcalc .cexp{min-height:24px;font-size:17px;color:var(--mute);word-break:break-all}
+.luxcalc .cres{font-size:38px;font-weight:700;font-variant-numeric:tabular-nums}
+.luxcalc .keys{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.luxcalc .keys button{min-height:56px;border:1px solid var(--line2);background:rgba(255,255,255,.05);color:var(--ink);font:22px var(--body);cursor:pointer;touch-action:manipulation}
+.luxcalc .keys button:active{background:rgba(255,255,255,.16)}
+.luxcalc .keys button.eq{grid-column:span 2;background:var(--acc);color:var(--acc-ink);font-weight:700}
 .capbox.panel.luxcap{left:40px;top:40px;bottom:auto;width:560px;padding:20px 24px 18px}
 .luxcap h2{font-size:30px;margin:0 0 10px}
 .luxcap p{font-size:19px;line-height:1.55;margin:0 0 6px}
@@ -517,7 +534,21 @@ table.data.tanq td,table.data.tanq th{padding:10px 14px}
 .stelrec .sx-list button.on{border-color:var(--acc)}
 .stelrec .sx-list b{display:block;font-family:var(--head);font-weight:400;font-size:21px;line-height:1.2}
 .stelrec .sx-list .en{color:var(--ink);margin-right:6px}.stelrec .sx-list .cn{color:var(--mute);font-size:13px}
-.stelrec .copied{min-height:22px;margin:10px 0 0;font-size:15px;color:var(--acc)}
+.stelrec .sx-list button{position:relative;padding-right:36px}
+.stelrec .sx-list .dg{position:absolute;right:10px;top:6px;font:400 30px var(--head);color:var(--acc);font-style:normal}
+.stelrec .sx-quiz{border-top:1px solid var(--line2);margin-top:18px;padding-top:14px}
+.stelrec .sx-q{font-size:17px;line-height:1.55;margin:0 0 10px}.stelrec .sx-q b{color:var(--acc)}
+.stelrec .sx-band{display:flex;justify-content:space-between;height:30px;align-items:center;padding:0 10px;font-size:14px;color:#111;font-weight:700;background:linear-gradient(90deg,#9db4ff,#c3d1ff,#f4f3ff,#fff0dc,#ffe1b0,#ffc58a,#ffa463)}
+.stelrec .sx-form{display:flex;gap:8px;margin-top:12px}
+.stelrec .sx-in{flex:1;min-width:0;background:#000;border:1px solid var(--line2);color:var(--ink);font:30px var(--head);letter-spacing:.35em;text-align:center;padding:6px}
+.stelrec .sx-in:focus{outline:none;border-color:var(--acc)}
+.stelrec .sx-in.bad{border-color:#ff8a7a;animation:shake .35s}
+.stelrec .sx-msg{min-height:22px;margin:8px 0 0;font-size:15px;color:#ff8a7a}
+.stelrec .sx-quiz.ok .sx-q b{color:#7fd28a}
+.stelrec .sx-ord{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:4px;text-align:center}
+.stelrec .sx-ord i{display:block;width:28px;height:28px;border-radius:50%;margin:0 auto 4px;box-shadow:0 0 12px currentColor}
+.stelrec .sx-ord b{display:block;font-size:13px;font-weight:400}.stelrec .sx-ord span{font-size:12px;color:var(--mute)}
+.stelrec .sx-hook{font-size:18px;line-height:1.55;margin:14px 0 12px}.stelrec .sx-hook b{color:var(--acc)}
 /* 스텔라리움은 좁은 화면에서 왼쪽 메뉴를 펼친다 → 넓게 불러온 뒤 줄여 채운다 */
 .stel .stf{width:1350px;height:1125px;transform:scale(.8);transform-origin:0 0}
 .spec{bottom:64px}
