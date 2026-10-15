@@ -262,6 +262,11 @@ ol.check.qs li::before{font-size:30px;top:14px}
 .luxcalc .keys button{min-height:56px;border:1px solid var(--line2);background:rgba(255,255,255,.05);color:var(--ink);font:22px var(--body);cursor:pointer;touch-action:manipulation}
 .luxcalc .keys button:active{background:rgba(255,255,255,.16)}
 .luxcalc .keys button.eq{grid-column:span 2;background:var(--acc);color:var(--acc-ink);font-weight:700}
+.luxcalc .put{width:100%;margin-top:8px;min-height:52px;font-size:17px;border-color:var(--acc);color:var(--acc)}.luxcalc .put:disabled{border-color:var(--line2);color:var(--mute);cursor:default}
+.luxrec .ans{min-width:86px;min-height:40px;border:1px dashed var(--line2);background:transparent;color:var(--mute);font:17px var(--body);cursor:pointer;font-variant-numeric:tabular-nums}
+.luxrec .ans.sel{border:2px solid var(--acc);color:var(--ink)}
+.luxrec .ans.ok{border-style:solid;border-color:var(--acc);color:var(--acc);font-weight:700}
+.luxrec .ans.no{border-style:solid;border-color:#e8695a;color:#e8695a}
 .capbox.panel.luxcap{left:40px;top:40px;bottom:auto;width:560px;padding:20px 24px 18px}
 .luxcap h2{font-size:30px;margin:0 0 10px}
 .luxcap p{font-size:19px;line-height:1.55;margin:0 0 6px}
@@ -284,6 +289,11 @@ table.data.mini .blank{min-width:60px;font-size:18px}
 .lbl3.inv{font-size:17px;line-height:1.4;text-align:center}
 .lbl3.inv b{display:block;font-size:22px}
 .lbl3.inv em{font-style:normal;color:var(--mute)}
+.invsum{left:40px;bottom:40px;min-width:330px;background:rgba(6,6,7,.86);border:1px solid var(--line2);padding:14px 18px}
+.invsum .lbl{margin-bottom:6px}
+.invsum table{border-collapse:collapse;width:100%;font-size:21px}
+.invsum td{padding:6px 0}.invsum td+td{text-align:right;padding-left:24px;font-weight:700;font-variant-numeric:tabular-nums}
+.invsum tr.hl td{color:var(--acc)}.invsum small{font-size:14px;font-weight:400;color:var(--mute)}
 .frac{display:inline-flex;flex-direction:column;vertical-align:middle;font-size:.8em;line-height:1;text-align:center;margin:0 2px}
 .frac i{font-style:normal}.frac i:first-child{border-bottom:1px solid currentColor;padding:0 2px 1px}
 .tele.seen{width:460px;height:300px}
