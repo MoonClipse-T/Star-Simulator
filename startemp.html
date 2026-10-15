@@ -307,6 +307,28 @@ table.data.mini .blank{min-width:60px;font-size:18px}
 .rec td.d{color:var(--acc);font-weight:700}
 .board-cap{width:620px}
 .board-cap .stp{top:0;bottom:auto}
+/* 시차 측정 모형판 — 학생 혼자 하기 (boardGame) */
+.misbox{left:40px;bottom:40px;width:430px;background:rgba(6,6,7,.8);border:1px solid var(--line);padding:16px 20px}
+.mis{list-style:none;margin:0;padding:0;counter-reset:m}
+.mis li{counter-increment:m;position:relative;padding:8px 0 8px 40px;font-size:16px;line-height:1.5;color:var(--dim);border-bottom:1px solid var(--line);transition:color .3s}
+.mis li:last-child{border-bottom:0}
+.mis li::before{content:counter(m);position:absolute;left:0;top:9px;width:26px;height:26px;border-radius:50%;border:1px solid var(--line2);text-align:center;line-height:25px;font-size:14px;color:var(--mute)}
+.mis li.now{color:var(--ink)}
+.mis li.now::before{border-color:var(--acc);color:var(--acc);box-shadow:0 0 0 4px rgba(242,163,58,.18)}
+.mis li.done{color:var(--mute)}
+.mis li.done::before{content:'✓';background:var(--acc);border-color:var(--acc);color:var(--acc-ink);font-weight:700}
+.mis b{color:inherit}.mis .rd{color:#e8695a}.mis .yl{color:#e9c548}
+.ctl.board.free{width:430px}
+.ctl.board.free .seg button{min-width:100px}
+.rec td.ok{color:#6fd39a}.rec td.ok::after{content:' ✓'}
+.rec td.no{color:#e8695a}.rec td.no::after{content:' ✗'}
+.rec .res{font-size:15px;line-height:1.5;color:var(--mute);margin:10px 0 0;min-height:1em}
+.rec .quiz{margin-top:14px;padding-top:12px;border-top:1px solid var(--line2)}
+.rec .quiz p{margin:0 0 10px;font-size:17px}
+.rec .quiz .qa{margin:10px 0 0;font-size:15px;line-height:1.55;color:var(--mute)}
+.rec .quiz .qa b{color:var(--acc)}
+.misbox.peek li:not(.now){display:none}
+.misbox.peek li.now{border-bottom:0}
 table.cmp{font-size:20px;margin:0}
 table.cmp td{padding:10px 14px}
 table.cmp td:last-child{width:150px;text-align:center}
