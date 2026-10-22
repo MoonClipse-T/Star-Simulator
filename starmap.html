@@ -753,16 +753,17 @@ table.data.tanq td,table.data.tanq th{padding:10px 14px}
 .lg-bars.ok .r i{background:linear-gradient(90deg,#3fb24f,#9be27a)}
 .lumg .pg-res{top:56px}
 
-/* 마무리 게임 「스타-윙또」 — 콘솔 게임 화면처럼 조용한 틀 + 그림이 주인공 (awesome-design-md · PlayStation 분석을 바탕으로)
-   원칙: 틀(패널 · 버튼)에는 그라디언트 · 글자 외곽선 · 빛 번짐을 쓰지 않는다. 화면을 채우는 건 우주 사진 · 지형 · 캐릭터.
-   표면: 반투명 검정 유리 + 머리카락 굵기 테두리 / 행동 색 하나: 파랑 #0070d1 (알약 버튼) / 가속 = 주황 #d53b00 / 1등 · 보상 = 금색 #ffce21 / 위험 #c81b3a
-   모서리: 8 (작은 것) · 16 (카드) · 알약 / 간격: 4 · 8 · 12 · 16 · 24 · 32
-   글꼴: GameT(검은고딕) = 숫자 · 제목 / GameU(주아) = 나머지 */
-.sim.race{--pri:#0070d1;--pri-p:#0064b7;--link:#53b1ff;--com:#d53b00;--gold:#ffce21;--warn:#c81b3a;--ok:#2e9e5b;
-  --deep:#121314;--elev:#181818;--char:#1f2024;--glass:rgba(14,15,18,.78);--glass2:rgba(14,15,18,.6);--hair:rgba(229,229,229,.18);
+/* 마무리 게임 「스타-윙또」 — 레이싱 게임 화면 (카트라이더 공식 사이트 색 · 레이싱 UI 를 바탕으로 한 inspired-by 디자인. 넥슨 로고 · 캐릭터 · 그림은 쓰지 않음)
+   색: 레이싱 노랑 #FDD801 (행동 · 강조 · 1등) + 로열 블루 #13027C (패널) + 바탕 #0D0D0D / 가속 = 부스터 주황 #FF5A1F / 위험 #E8243C
+   모양: 모서리를 비스듬히 자른 판(clip-path) · 기울인 굵은 숫자(italic) · 체크무늬 결승선 띠 · 아래 테두리가 두꺼운 눌리는 버튼
+   그라디언트 · 빛 번짐 · 글자 외곽선은 쓰지 않는다 (그림은 우주 사진 · 지형 · 캐릭터가 맡는다)
+   글꼴: GameT(검은고딕) = 숫자 · 제목 (기울임) / GameU(주아) = 나머지 */
+.sim.race{--pri:#FDD801;--pri-p:#E8C400;--pri-e:#B89A00;--on-pri:#0D0D0D;--link:#8FB8FF;--com:#FF5A1F;--gold:#FDD801;--warn:#E8243C;--ok:#1FA55A;
+  --blue:#13027C;--deep:#0B0450;--elev:#170A8C;--char:#22149E;--glass:rgba(19,2,124,.84);--glass2:rgba(19,2,124,.62);--hair:rgba(255,255,255,.16);
+  --cut:14px;--chk:repeating-conic-gradient(#fff 0 25%,#0d0d0d 0 50%) 0 0/14px 14px;
   --body2:rgba(255,255,255,.72);--mute:rgba(229,229,229,.55);--sh:0 8px 24px rgba(0,0,0,.35);
   --gt:"GameT",var(--head);--gu:"GameU",var(--body);
-  background:#05061a;touch-action:none;user-select:none;-webkit-user-select:none}
+  background:#0D0D0D;touch-action:none;user-select:none;-webkit-user-select:none}
 .race .rc-cv{position:absolute;inset:0;width:100%;height:100%;display:block}
 .race .rc-ui{position:absolute;inset:0;pointer-events:none;z-index:4;font-family:var(--gu);color:#fff}
 .race .rc-ui b,.race .rc-ui p,.race .rc-ui li,.race .rc-ui h1,.race .rc-ui h2,.race .rc-ui h3,.race .rc-ui small,.race .rc-ui span,.race .rc-ui em{color:inherit;font-weight:400}
@@ -781,13 +782,13 @@ table.data.tanq td,table.data.tanq th{padding:10px 14px}
 
 /* 버튼: 알약 · 한 가지 파랑 */
 .race .rc-btn{display:block;margin:24px auto 0;background:var(--pri);color:#fff;font-family:var(--gt);font-size:28px;border-radius:999px;padding:14px 44px;transition:background .15s,transform .1s}
-.race .rc-btn:hover{background:var(--pri-p)}
+
 .race .rc-btn:active{transform:scale(.97)}
 .race .rc-btn.big{font-size:34px;padding:16px 60px}
 .race .rc-btn small{font-family:var(--gu);font-size:.6em;margin-left:10px;opacity:.8}
 .race .rc-btn:disabled{background:var(--char);color:var(--mute);cursor:default;transform:none}
 .race .rc-btn.ghost{background:none;color:var(--body2);font-family:var(--gu);font-size:19px;text-decoration:underline;text-underline-offset:4px;padding:8px 12px}
-.race .rc-btn.ghost:hover{color:#fff;background:none}
+
 
 /* 참가 화면 */
 .race .rc-join{position:absolute;inset:0;padding:32px 60px 0;display:flex;flex-direction:column;align-items:center;background:linear-gradient(180deg,rgba(5,6,16,.25),rgba(5,6,16,.7))}
@@ -799,7 +800,7 @@ table.data.tanq td,table.data.tanq th{padding:10px 14px}
 .race .rc-teams-pick{display:flex;gap:12px;margin:24px 0 8px}
 .race .rc-teams-pick button{display:flex;align-items:center;gap:10px;background:var(--glass);border:1px solid var(--hair);color:#fff;font-family:var(--gt);font-size:26px;border-radius:999px;padding:10px 24px 10px 16px;transition:background .15s,transform .1s}
 .race .rc-teams-pick button i{width:14px;height:14px;border-radius:50%;background:var(--c)}
-.race .rc-teams-pick button:hover{background:var(--char)}
+
 .race .rc-teams-pick button.on{background:var(--c);border-color:var(--c);color:#000}
 .race .rc-teams-pick button.on i{background:#fff}
 .race .rc-teams-pick.big button{font-size:32px;padding:14px 32px 14px 22px}
@@ -815,17 +816,17 @@ table.data.tanq td,table.data.tanq th{padding:10px 14px}
 .race .rc-th small{font-family:var(--gu);font-size:21px;color:var(--body2);margin-left:8px;text-shadow:none}
 .race .rc-names{list-style:none;margin:24px 0 8px;padding:0;display:grid;grid-template-columns:repeat(2,360px);gap:12px 24px}
 .race .rc-names li{display:flex;align-items:center;gap:12px}
-.race .rc-names b{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-family:var(--gt);font-size:26px;background:var(--c);color:#000}
+.race .rc-names b{flex:none;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-family:var(--gt);font-size:26px;background:var(--c);color:#000}
 .race .rc-names input{flex:1;font:28px var(--gu);padding:10px 16px;border-radius:8px;border:1px solid var(--hair);background:#fff;color:#000}
 
 /* 캐릭터 카드 */
 .race .rc-heroes{display:flex;gap:16px}
 .race .rc-heroes button{position:relative;width:228px;padding:0 0 16px;border-radius:16px;border:1px solid var(--hair);background:var(--elev);display:flex;flex-direction:column;align-items:stretch;text-align:left;overflow:hidden;transition:transform .15s,border-color .15s}
-.race .rc-heroes button:hover{transform:translateY(-4px)}
-.race .rc-heroes .pic{display:block;height:160px;background:color-mix(in srgb,var(--c) 28%,var(--char))}
+
+.race .rc-heroes .pic{display:block;height:160px;background:color-mix(in srgb,var(--c) 52%,var(--char))}
 .race .rc-heroes .pic img{width:160px;height:160px;display:block;margin:0 auto}
 .race .rc-heroes b{font-family:var(--gt);font-size:30px;line-height:1;margin:14px 16px 0}
-.race .rc-heroes small{font-size:15px;color:var(--mute);margin:6px 16px 10px}
+.race .rc-heroes small{font-size:16px;color:var(--mute);margin:6px 16px 10px}
 .race .rc-heroes dl{display:grid;grid-template-columns:auto 1fr;gap:6px 10px;margin:0 16px 12px;font-size:14px;align-items:center}
 .race .rc-heroes dt{color:var(--mute)}.race .rc-heroes dd{margin:0}
 .race .rc-heroes dd i{display:flex;gap:3px}
@@ -869,16 +870,16 @@ table.data.tanq td,table.data.tanq th{padding:10px 14px}
 .race .rc-me em{font-style:normal;font-family:var(--gt);font-size:38px;line-height:1.05}
 .race .rc-me em small{font-size:20px;margin-left:3px;color:var(--body2)}
 .race .rc-hp{position:relative;width:240px;height:18px;margin-top:6px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden;--hp:100%}
-.race .rc-hp i{position:absolute;left:0;top:0;bottom:0;width:var(--hp);border-radius:999px;background:#3ddc84;transition:width .15s}
+.race .rc-hp i{position:absolute;inset:0;border-radius:999px;background:#3ddc84;transform-origin:left;transition:transform .15s cubic-bezier(.23,1,.32,1)}
 .race .rc-hp.low i{background:var(--warn);animation:rc-blink .6s infinite}
 .race .rc-hp.gh i{background:#e9e4f5}
-.race .rc-hp span{position:relative;display:block;text-align:center;font-family:var(--gt);font-size:13px;line-height:18px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+.race .rc-hp span{position:relative;display:block;text-align:center;font-family:var(--gt);font-size:14px;line-height:18px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6)}
 @keyframes rc-blink{50%{opacity:.35}}
 /* 팀 순위 막대 */
 .race .rc-tlist{position:absolute;left:24px;top:124px;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px;width:232px}
 .race .rc-tlist li{position:relative;display:flex;align-items:center;gap:8px;height:28px;padding:0 12px 0 8px;border-radius:8px;background:var(--glass2);overflow:hidden;font-size:16px}
-.race .rc-tlist li::before{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--w);background:var(--c);opacity:.35;transition:width .3s}
 .race .rc-tlist li>*{position:relative}
+.race .rc-tlist li>i{position:absolute;inset:0;background:var(--c);opacity:.35;transform-origin:left;transform:scaleX(0);transition:transform .3s cubic-bezier(.23,1,.32,1)}
 .race .rc-tlist li b{font-family:var(--gt);width:18px;text-align:center}
 .race .rc-tlist li em{margin-left:auto;font-style:normal;font-family:var(--gt)}
 .race .rc-tlist li.me{box-shadow:inset 0 0 0 2px #fff}
@@ -913,11 +914,12 @@ table.data.tanq td,table.data.tanq th{padding:10px 14px}
 .race .rc-q.res em{font-style:normal;font-size:20px;color:rgba(255,255,255,.9)}
 /* 왼쪽 아래: 기술 칸 (조각 게이지 고리) + 켜진 효과 */
 .race .rc-item{position:absolute;left:24px;bottom:24px;display:flex;align-items:center;--p:0}
-.race .rc-item .ic{position:relative;z-index:1;width:104px;height:104px;border-radius:50%;display:grid;place-items:center;font-size:44px;font-family:var(--gt);color:var(--mute);
+.race .rc-item .ic{position:relative;z-index:1;width:92px;height:92px;border-radius:50%;display:grid;place-items:center;font-size:44px;font-family:var(--gt);color:var(--mute);
   background:radial-gradient(circle,var(--deep) 60%,transparent 61%),conic-gradient(#7fd3ff calc(var(--p) * 360deg),rgba(255,255,255,.14) 0);box-shadow:var(--sh)}
 .race .rc-item .tx{margin-left:-20px;padding:10px 20px 10px 34px;background:var(--glass);border:1px solid var(--hair);border-left:0;border-radius:0 16px 16px 0;max-width:340px}
 .race .rc-item .tx b{display:block;font-family:var(--gt);font-size:21px}
-.race .rc-item .tx small{font-size:14px;color:var(--body2)}
+.race .rc-item .ic img,.race .rc-b i img{width:64px;height:64px;display:block}
+.race .rc-item .tx small{font-size:16px;color:var(--body2)}
 .race .rc-item kbd{position:absolute;left:76px;top:-4px;z-index:2;font:13px var(--gt);background:#fff;color:#000;border-radius:6px;padding:1px 7px}
 .race .rc-item.on .ic{color:#fff;background:radial-gradient(circle,var(--pri) 60%,transparent 61%),conic-gradient(var(--gold) 360deg,var(--gold) 0)}
 .race .rc-item.gh .ic{color:#000;background:radial-gradient(circle,#efeaf8 60%,transparent 61%),conic-gradient(#ff8fb0 360deg,#ff8fb0 0)}
@@ -932,19 +934,22 @@ table.data.tanq td,table.data.tanq th{padding:10px 14px}
   -webkit-mask:radial-gradient(circle,transparent 50px,#000 51px);mask:radial-gradient(circle,transparent 50px,#000 51px)}
 .race .rc-speed::before{content:"";position:absolute;inset:10px;border-radius:50%;background:var(--glass);box-shadow:var(--sh)}
 .race .rc-speed b{position:relative;font-family:var(--gt);font-size:36px;line-height:1;margin-top:-8px}
-.race .rc-speed small{position:absolute;top:74px;font-size:13px;color:var(--mute)}
+.race .rc-speed small{position:absolute;top:74px;font-size:14px;color:var(--mute)}
 .race .rc-speed span{position:absolute;bottom:-10px;font-family:var(--gt);font-size:14px;background:var(--glass);border:1px solid var(--hair);border-radius:999px;padding:1px 12px}
 .race .rc-speed.on .dial{background:conic-gradient(from 225deg,var(--gold) calc(var(--p) * 270deg),rgba(255,255,255,.14) calc(var(--p) * 270deg) 270deg,transparent 270deg)}
 .race .rc-speed.on span{background:var(--com);border-color:var(--com)}
 /* 미니맵 */
-.race .rc-mini{position:absolute;left:670px;bottom:44px;width:400px;font-size:12px;color:var(--mute)}
+.race .rc-mini{position:absolute;left:670px;bottom:44px;width:400px;font-size:14px;color:var(--mute)}
 .race .rc-mini .bar{position:relative;height:8px;border-radius:999px;background:rgba(255,255,255,.18)}
 .race .rc-mini span{position:absolute;top:18px;left:0}.race .rc-mini span+span{left:auto;right:0}
-.race .rc-mini i{position:absolute;top:-4px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--c);box-shadow:0 0 0 2px rgba(0,0,0,.5)}
-.race .rc-mini i.gh{opacity:.4}.race .rc-mini i.me{background:#fff;top:-8px;width:6px;height:24px;margin-left:-3px;border-radius:3px}
+.race .rc-mini i{position:absolute;left:0;top:-4px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--c);box-shadow:0 0 0 2px rgba(0,0,0,.5);transition:transform .15s linear}
+.race .rc-mini i.gh{opacity:.4}.race .rc-mini i.me{left:50%;background:#fff;top:-8px;width:6px;height:24px;margin-left:-3px;border-radius:3px;transition:none}
+/* 캐릭터가 아래 HUD 뒤로 내려가면 흐리게 (버튼은 그대로) */
+.race .rc-item,.race .rc-speed,.race .rc-mini,.race .rc-fx{transition:opacity .2s cubic-bezier(.23,1,.32,1)}
+.race .rc-hud.dim .rc-item,.race .rc-hud.dim .rc-speed,.race .rc-hud.dim .rc-mini,.race .rc-hud.dim .rc-fx{opacity:.3}
 /* 오른쪽 아래: 큰 둥근 버튼 */
 .race .rc-btns{position:absolute;right:28px;bottom:28px;display:flex;gap:18px;pointer-events:auto}
-.race .rc-b{width:140px;height:140px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--gt)!important;font-size:22px;color:#fff!important;box-shadow:var(--sh);transition:transform .08s,background .15s}
+.race .rc-b{width:124px;height:124px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--gt)!important;font-size:22px;color:#fff!important;box-shadow:var(--sh);transition:transform .08s,background .15s}
 .race .rc-b i{font-style:normal;font-size:44px;line-height:1.05}
 .race .rc-b.boost{background:var(--com)}
 .race .rc-b.skill{background:var(--glass);border:1px solid var(--hair)!important}
@@ -989,10 +994,10 @@ table.data.tanq td,table.data.tanq th{padding:10px 14px}
 .race .rc-code span{font-family:var(--gt);font-size:24px}
 .race .rc-code>b{font-family:var(--gt);font-size:96px;line-height:1;letter-spacing:.06em}
 .race .rc-set{margin:20px 0 0}
-.race .rc-set>p{font-size:15px;color:var(--mute);margin:14px 0 6px}
+.race .rc-set>p{font-size:17px;color:var(--mute);margin:14px 0 6px}
 .race .chips{display:flex;flex-wrap:wrap;gap:8px}
-.race .chip{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border-radius:999px;padding:6px 16px;font-size:17px;transition:background .15s}
-.race .chip:hover{background:rgba(255,255,255,.16)}
+.race .chip{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border-radius:999px;padding:10px 18px;min-height:44px;font-size:17px;transition:background .15s}
+
 .race .chip b{font-family:var(--gt);font-size:19px}.race .chip small{font-size:14px;opacity:.7}
 .race .chip.on{background:#fff;color:#000}
 .race .chips.th .chip{flex-direction:column;padding:4px 4px 6px;gap:4px;font-size:13px;width:78px;border-radius:12px}
@@ -1016,13 +1021,13 @@ table.data.tanq td,table.data.tanq th{padding:10px 14px}
 .race .rc-board{position:absolute;inset:0}
 .race .rc-bt{position:absolute;left:24px;right:24px;top:22px;display:flex;align-items:center;gap:16px}
 .race .rc-bt .rc-logo{font-size:48px;margin-right:8px}
-.race .rc-bt .bgn{font-size:19px;background:var(--glass);border:1px solid var(--hair);border-radius:999px;padding:6px 16px}
+.race .rc-bt .bgn{font-size:22px;background:var(--glass);border:1px solid var(--hair);border-radius:999px;padding:6px 16px}
 .race .rc-bt .rc-time{margin-left:auto}
 .race .rc-bt .rc-btn{margin:0}
 .race .rc-side{position:absolute;right:24px;top:118px;width:350px;list-style:none;margin:0;padding:12px 16px;border-radius:16px;border:1px solid var(--hair);background:var(--glass);box-shadow:var(--sh)}
-.race .rc-side li{display:flex;align-items:center;gap:10px;font-size:20px;padding:7px 2px;border-bottom:1px solid var(--hair)}
+.race .rc-side li{display:flex;align-items:center;gap:10px;font-size:25px;padding:9px 2px;border-bottom:1px solid var(--hair)}
 .race .rc-side li:last-child{border:0}
-.race .rc-side li.h{font-size:14px;color:var(--mute);padding-top:4px}
+.race .rc-side li.h{font-size:17px;color:var(--mute);padding-top:4px}
 .race .rc-side li b{width:22px;font-family:var(--gt);text-align:center}
 .race .rc-side li:nth-child(2) b{color:var(--gold)}
 .race .rc-side li i{width:12px;height:12px;border-radius:50%;background:var(--c)}
@@ -1043,14 +1048,14 @@ table.data.tanq td,table.data.tanq th{padding:10px 14px}
 .race .rc-pod .blk{width:100%;border-radius:12px 12px 0 0;background:var(--c);display:grid;place-items:center;transform-origin:bottom;animation:rc-rise .6s cubic-bezier(.2,1.2,.4,1) backwards}
 .race .rc-pod .blk i{font-style:normal;font-family:var(--gt);font-size:76px;color:rgba(0,0,0,.55)}
 .race .rc-pod .s1 .blk{height:200px;animation-delay:.35s}.race .rc-pod .s2 .blk{height:140px;animation-delay:.15s}.race .rc-pod .s3 .blk{height:100px}
-.race .rc-pod .crown{display:block;width:44px;height:44px;margin-bottom:6px;font-size:0;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px rgba(255,206,33,.25);animation:rc-cd .5s .8s cubic-bezier(.2,1.4,.4,1) backwards}
+.race .rc-pod .crown{display:block;margin-bottom:8px;font-family:var(--gt);font-size:20px;color:#000;background:var(--gold);border-radius:999px;padding:4px 18px;animation:rc-cd .5s .8s cubic-bezier(.2,1.4,.4,1) backwards}
 @keyframes rc-rise{0%{transform:scaleY(0)}100%{transform:scaleY(1)}}
 .race .rc-rest{list-style:none;display:flex;justify-content:center;gap:8px;margin:0;padding:14px 0 0;border-top:1px solid var(--hair)}
 .race .rc-rest li{display:flex;align-items:center;gap:8px;background:var(--char);border-radius:8px;padding:6px 16px;font-size:19px}
 .race .rc-rest li i{font-style:normal;font-family:var(--gt);color:var(--mute)}.race .rc-rest li b{font-family:var(--gt)}.race .rc-rest li em{font-style:normal;color:var(--body2)}
 .race .rc-sub{margin:12px 0 0;font-size:15px;color:var(--mute)}
-.race .rc-mvp{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.race .rc-mvp li{display:flex;flex-direction:column;align-items:center;gap:2px;background:var(--char);border-radius:12px;padding:10px 6px;border-top:3px solid var(--c)}
+.race .rc-mvp{list-style:none;margin:16px 0 0;padding:0;display:flex;justify-content:center;gap:10px}
+.race .rc-mvp li{width:236px;display:flex;flex-direction:column;align-items:center;gap:2px;background:var(--char);border-radius:12px;padding:10px 6px;border-top:3px solid var(--c)}
 .race .rc-mvp li span{font-size:14px;color:var(--mute)}.race .rc-mvp li b{font-family:var(--gt);font-size:22px}.race .rc-mvp li em{font-style:normal;font-size:15px;color:var(--body2)}
 .race .rc-foot{display:flex;align-items:center;gap:22px;margin-top:22px}.race .rc-foot .rc-btn{margin:0}.race .rc-room{font-family:var(--gt);font-size:20px;color:var(--mute)}
 .race .rc-over>.rc-note{font-size:19px;margin-top:18px}
@@ -1071,7 +1076,103 @@ table.data.tanq td,table.data.tanq th{padding:10px 14px}
 .race .rc-rules li:first-child{grid-column:1/-1}
 .race .rc-rules b{display:block;font-family:var(--gt);font-weight:400;font-size:22px;color:var(--gold);margin-bottom:2px}
 
-@media (prefers-reduced-motion:reduce){.race .rc-ui *{animation:none!important;transition:none!important}}
+/* ===== 레이싱 스킨: 비스듬히 자른 판 · 기울인 숫자 · 체크무늬 · 노랑 버튼 ===== */
+/* 비스듬히 자른 판: 왼쪽 위 · 오른쪽 아래 모서리를 잘라 레이싱 HUD 처럼 */
+.race .rc-join-info,.race .rc-tgrid .tc,.race .rc-res,.race .rc-card,.race .rc-side,.race .rc-how,.race .rc-heroes button,.race .rc-item .tx,.race .rc-waitbar,.race .rc-msg .rc-keys{
+  border-radius:0;clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+/* 평행사변형 띠: 이름표 · 시간 · 순위 줄 · 칩 */
+.race .rc-me,.race .rc-time,.race .rc-tlist li,.race .rc-bt .bgn,.race .chip:not(.th .chip),.race .rc-teams-pick button,.race .rc-roster li,.race .rc-live,.race .rc-rivals span,.race .rc-msg .cdinfo,.race .rc-fx span,.race .rc-legs li,.race .rc-rest li,.race .rc-pips{
+  border-radius:0;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%)}
+.race .rc-me{padding-left:14px;padding-right:34px}
+.race .rc-me .pic{border-radius:8px;box-shadow:inset 0 0 0 3px var(--c)}
+.race .rc-time,.race .rc-tlist li{padding-left:18px;padding-right:18px}
+/* 노랑 버튼: 검정 기울임 글자 · 아래 두꺼운 테두리 → 누르면 내려앉는다 */
+.race .rc-btn{background:var(--pri);color:var(--on-pri);font-style:italic;border-radius:0;clip-path:polygon(16px 0,100% 0,calc(100% - 16px) 100%,0 100%);padding-left:56px;padding-right:56px;box-shadow:inset 0 -6px 0 var(--pri-e);transition:transform .1s cubic-bezier(.23,1,.32,1),box-shadow .1s}
+.race .rc-btn:active{transform:translateY(3px);box-shadow:inset 0 -2px 0 var(--pri-e)}
+.race .rc-btn:disabled{background:var(--char);color:var(--mute);box-shadow:none}
+.race .rc-btn.ghost{clip-path:none;box-shadow:none;font-style:normal;padding:8px 12px}
+.race .rc-heroes em span,.race .rc-q .lv{background:var(--pri);color:var(--on-pri)}
+.race .rc-q .lv{border-radius:0;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%);padding:2px 14px}
+.race .rc-q .lv.orb{background:rgba(255,255,255,.2);color:#fff}
+/* 기울인 굵은 숫자 */
+.race .rc-logo,.race .rc-rank,.race .rc-time,.race .rc-me em,.race .rc-speed b,.race .rc-msg .cd,.race .rc-code>b,.race .rc-pod .blk i,.race .rc-pod .st em,.race .rc-side li em,.race .rc-tlist li em,.race .rc-th,.race .rc-k{font-style:italic}
+/* 제목: 흰 글자 + 노랑 + 아래 체크무늬 결승선 */
+.race .rc-logo{position:relative;padding-bottom:.22em}
+.race .rc-logo::after{content:"";position:absolute;left:0;right:0;bottom:0;height:.14em;background:var(--chk);clip-path:polygon(.2em 0,100% 0,calc(100% - .2em) 100%,0 100%)}
+.race .rc-logo span+span{color:var(--pri)}
+/* 판 위쪽 노랑 줄 */
+.race .rc-join-info,.race .rc-res,.race .rc-card,.race .rc-side,.race .rc-q{box-shadow:inset 0 4px 0 var(--pri)}
+.race .rc-tgrid .tc::before{height:6px}
+/* 참가 · 대기 바탕: 짙은 파랑으로 가라앉힌 우주 */
+.race .rc-join{background:linear-gradient(180deg,rgba(19,2,124,.3),rgba(8,3,48,.82))}
+/* 방 번호: 노랑 판 · 파랑 숫자 */
+.race .rc-code{background:var(--pri);color:var(--blue);border-radius:0;clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+.race .rc-code p{color:rgba(19,2,124,.7)}.race .rc-code p b{color:var(--blue)}
+.race .rc-row .tk input,.race .rc-names input{border-radius:0;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.race .chip.on,.race .rc-roster li.now,.race .rc-teams-pick button.on{background:var(--pri);color:var(--on-pri)}
+.race .rc-roster li.now b{color:var(--on-pri)}
+.race .rc-teams-pick button.on{border-color:var(--pri)}
+.race .rc-teams-pick button.on i{background:var(--c)}
+/* 캐릭터 카드: 고르면 노랑 테두리 + 노랑 '선택' 꼬리표 */
+.race .rc-heroes button{border:0;background:var(--elev)}
+.race .rc-heroes button.on{box-shadow:inset 0 0 0 4px var(--pri)}
+.race .rc-heroes button.on::after{background:var(--pri);color:var(--on-pri);border-radius:0;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%);font-style:italic;padding:4px 16px}
+.race .rc-heroes dd u{background:var(--pri)}
+/* 경기 HUD */
+.race .rc-rank b{font-size:112px}
+.race .rc-rank b,.race .rc-rank span{color:#fff;text-shadow:5px 6px 0 var(--blue)}
+.race .rc-rank[data-top="1"] b,.race .rc-rank[data-top="1"] span{color:var(--pri)}
+.race .rc-tlist li.me{box-shadow:inset 0 0 0 2px var(--pri)}
+.race .rc-pips li.now{background:var(--pri)}
+.race .rc-item .ic{background:radial-gradient(circle,var(--deep) 60%,transparent 61%),conic-gradient(var(--pri) calc(var(--p) * 360deg),rgba(255,255,255,.14) 0)}
+.race .rc-item.on .ic{color:var(--on-pri);background:radial-gradient(circle,var(--pri) 60%,transparent 61%),conic-gradient(#fff 360deg,#fff 0)}
+.race .rc-speed .dial{background:conic-gradient(from 225deg,var(--pri) calc(var(--p) * 270deg),rgba(255,255,255,.14) calc(var(--p) * 270deg) 270deg,transparent 270deg)}
+.race .rc-speed.on .dial{background:conic-gradient(from 225deg,var(--com) calc(var(--p) * 270deg),rgba(255,255,255,.14) calc(var(--p) * 270deg) 270deg,transparent 270deg)}
+.race .rc-b{box-shadow:inset 0 -7px 0 rgba(0,0,0,.28),var(--sh);font-style:italic}
+.race .rc-b.skill.on{background:var(--pri);border-color:var(--pri)!important;color:var(--on-pri)!important}
+.race .rc-b.skill.on i{color:var(--on-pri)}
+.race .rc-q span u{background:var(--pri);color:var(--on-pri);border-radius:0;clip-path:polygon(5px 0,100% 0,calc(100% - 5px) 100%,0 100%);padding:2px 12px}
+.race .rc-q .qt{color:var(--on-pri);font-style:italic}
+/* 카운트다운: 노랑 기울인 숫자 + 파랑 그림자 (외곽선 대신 단색으로 밀어 낸 그림자) */
+.race .rc-msg .cd{color:var(--pri);text-shadow:8px 10px 0 var(--blue)}
+.race .rc-msg .cd.go{color:#fff;text-shadow:8px 10px 0 var(--com)}
+/* 결과: 체크무늬 띠 + 금 · 은 · 동 시상대 (팀 색은 시상대 위 이름표로) */
+.race .rc-res{position:relative;padding-top:40px;background:rgba(11,4,80,.94)}
+.race .rc-over{background:rgba(5,3,30,.7)}
+.race .rc-res::before{content:"";position:absolute;left:0;right:0;top:4px;height:14px;background:var(--chk)}
+.race .rc-pod .s1 .blk{background:#FDD801}.race .rc-pod .s2 .blk{background:#C9D3E0}.race .rc-pod .s3 .blk{background:#D98A4A}
+.race .rc-pod .blk{border-radius:0;clip-path:polygon(10px 0,calc(100% - 10px) 0,100% 100%,0 100%)}
+.race .rc-pod .blk i{color:var(--blue)}
+.race .rc-pod .st b{display:inline-flex;align-items:center;gap:8px}
+.race .rc-pod .st b::before{content:"";width:14px;height:14px;background:var(--c);clip-path:polygon(3px 0,100% 0,calc(100% - 3px) 100%,0 100%)}
+.race .rc-pod .crown{display:inline-flex;align-items:center;gap:6px;background:var(--pri);color:var(--on-pri);border-radius:0;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);font-style:italic;padding:4px 20px}
+.race .rc-pod .crown svg{width:22px;height:22px}
+.race .rc-mvp li{border-radius:0;border-top-color:var(--pri);clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+/* 링크 슬라이드 */
+.race .rc-rules li{border-radius:0;clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px)}
+.race .rc-rules b{color:var(--pri)}
+
+/* 마우스가 있는 기기에서만 hover (디벗에서 누른 뒤 떠 있는 채로 남지 않게) */
+@media (hover:hover) and (pointer:fine){
+  .race .rc-btn:hover{background:var(--pri-p)}
+  .race .rc-btn.ghost:hover{color:#fff;background:none}
+  .race .rc-teams-pick button:not(.on):hover{background:var(--char)}
+  .race .rc-heroes button:hover{transform:translateY(-4px)}
+  .race .chip:not(.on):hover{background:rgba(255,255,255,.16)}
+}
+/* 움직임 줄이기: 위치 · 크기 움직임은 빼고, 나타남 · 사라짐(투명도)만 남긴다 */
+@keyframes rc-fade{0%{opacity:0}100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .race .rc-ui *{transition-property:opacity,background-color,border-color,color!important}
+  .race .rc-msg .cd,.race .rc-pod .blk,.race .rc-pod .crown{animation-name:rc-fade!important}
+  .race .rc-item.got .ic{animation:none}
+  .race .rc-heroes button.on,.race .rc-heroes button:hover,.race .rc-btn:active{transform:none}
+  .race .rc-q{transform:translate(-50%,0);opacity:0;transition:opacity .2s}
+  .race .rc-q.on{opacity:1}
+}
+/* 대기실: 연결 표시 */
+.race .rc-live{display:inline-flex;align-items:center;gap:8px;margin:10px 0 0;font-size:18px;background:var(--glass);border:1px solid var(--hair);border-radius:999px;padding:6px 16px}
+.race .rc-live i{width:10px;height:10px;border-radius:50%;background:#3ddc84}
 </style></head>
 <body><div id="viewport"><div id="stage">
 <section class="slide" data-title="별의 연주 시차와 거리" data-nochrome data-steps="5" data-credit="배경 하늘 · NASA/Goddard SVS · 자료 · Strasbourg Astronomical Data Center (2024)">
