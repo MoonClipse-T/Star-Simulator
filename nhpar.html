@@ -1172,6 +1172,23 @@ table.data.tanq td,table.data.tanq th{padding:10px 14px}
 /* 대기실: 연결 표시 */
 .race .rc-live{display:inline-flex;align-items:center;gap:8px;margin:10px 0 0;font-size:18px;background:var(--glass);border:1px solid var(--hair);border-radius:999px;padding:6px 16px}
 .race .rc-live i{width:10px;height:10px;border-radius:50%;background:#3ddc84}
+
+/* 스타-윙또 선생님 화면: 팀 레인 ↔ 경기 화면(관전) */
+.race .rc-view{display:flex;border:1px solid var(--hair);border-radius:999px;overflow:hidden;background:var(--glass)}
+.race .rc-view button{font-size:19px;padding:7px 16px;background:transparent;color:var(--mute)}
+.race .rc-board[data-view=lanes] .rc-view [data-v=lanes],.race .rc-board[data-view=watch] .rc-view [data-v=watch]{background:#FDD801;color:#13027C;font-weight:700}
+.race .rc-board[data-view=lanes] .rc-wq{display:none}
+.race .rc-board[data-view=watch] .rc-side li[data-t]{cursor:pointer}
+.race .rc-side li.auto{font-size:17px;color:var(--mute);justify-content:center;border:1px dashed var(--hair);border-radius:10px;margin:4px 0}
+.race .rc-side li.fol{box-shadow:inset 4px 0 0 #FDD801;background:rgba(253,216,1,.12)}
+.race .rc-wq{position:absolute;left:24px;top:104px;max-width:760px;pointer-events:none}
+.race .rc-wq .who{display:inline-flex;align-items:center;gap:10px;margin:0;font:400 28px var(--gt);color:#fff;background:var(--glass);border:1px solid var(--hair);border-radius:999px;padding:6px 18px}
+.race .rc-wq .who i{width:16px;height:16px;border-radius:50%;background:var(--c)}.race .rc-wq .who em{font-style:normal;color:#FDD801}.race .rc-wq .who small{font-size:15px;color:var(--mute)}
+.race .rc-wq .q{margin-top:10px;background:rgba(255,253,245,.96);color:#1a1530;border-radius:16px;padding:12px 18px}
+.race .rc-wq .q p{margin:0 0 8px;font:400 26px var(--gu)}.race .rc-wq .q div{display:flex;flex-wrap:wrap;gap:8px}
+.race .rc-wq .q span{display:inline-flex;align-items:center;gap:6px;background:#efeaf8;border-radius:999px;padding:4px 12px;font-size:19px}
+.race .rc-wq .q u{text-decoration:none;color:#6a3fd6;font-weight:700}
+.race .rc-board[data-view=watch] .rc-side{pointer-events:auto}
 </style></head>
 <body><div id="viewport"><div id="stage">
 <section class="slide" data-title="실제 사진으로 보는 시차" data-nochrome data-steps="4" data-credit="사진 · NASA / Johns Hopkins APL / SwRI — New Horizons · 위치 · NASA JPL Horizons · 탐사선 모델 · NASA 3D Resources · 하늘 · NASA/Goddard SVS">
